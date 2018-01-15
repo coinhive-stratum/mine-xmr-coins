@@ -1,0 +1,23 @@
+PPLNS
+Pay Per Last N Shares (PPLNS) is a method of distributing earnings amongst
+miners. It distributes payouts for each block amongst the last N shares,
+regardless of when the previous block was found. This solves the issue of pool
+hopping, where it is more profitable to mine straight after a block is found.
+With PPLNS, loyal miners will get the better profits. 
+mineXMR has switched to PPLNS with a window of approximately 30 minutes
+(dependant on factors including pool hashrate). This means that there will be a
+ramp up and ramp down in payments when you start or stop mining.
+
+Invalid Shares
+Invalid shares should not occur with a properly set up miner. They are commonly
+caused by unstable overclocks. The shares will not be credited, and your miner
+will be notified. There is no penalty for submitting invalid shares, however if
+you submit too many you will be banned for 10 minutes to prevent DDOS attacks.
+
+Expired Shares
+Expired shares are a regular occurance, since there is always some latency
+(measured in ms) between the network finding a new block and all miners being
+notified. Some miners however error out when the pool tells them the submission
+is expired. Because of this, the pool will send an OK to recently expired
+shares and you will be able to see them in your detailed stats soon, instead of
+seeing it in your miner output.
